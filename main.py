@@ -21,7 +21,7 @@ class MainHandler(webapp2.RequestHandler):
     def post(self):
   	    self.response.write("Button Works")
   def get(self):  # for a get request
-    self.response.write('Greetings')  # the response
+  self.response.write('Greeting')  # the response
 
 class GameHandler(webapp2.RequestHandler):
     def get(self):
