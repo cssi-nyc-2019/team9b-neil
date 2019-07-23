@@ -4,7 +4,7 @@ import jinja2
 import os
 
 # this initializes the jinja2 environment
-# this will be the same in every app that uses the jinja2 templating library 
+# this will be the same in every app that uses the jinja2 templating library
 the_jinja_env = jinja2.Environment(
   loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
   extensions=['jinja2.ext.autoescape'],
@@ -28,7 +28,7 @@ class GameHandler(webapp2.RequestHandler):
 		gameTemplate = the_jinja_env.get_template('templates/game.html')
 		self.response.write(gameTemplate.render())
 
-# the app configuration section	
+# the app configuration section
 app = webapp2.WSGIApplication([
   #('/', MainPage),
   ('/', MainHandler),
