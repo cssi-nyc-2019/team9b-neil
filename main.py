@@ -14,12 +14,21 @@ the_jinja_env = jinja2.Environment(
 
 # the handler section
 class MainHandler(webapp2.RequestHandler):
-  def get(self):  # for a get request
-    self.response.write('Greetings')  # the response
+    def get(self):  # for a get request
+    	# self.response.write('Greetings')  # the response
+        homeTemplate = the_jinja_env.get_template('templates/index.html')
+        self.response.write(homeTemplate.render())
+    def post(self):
+  	    self.response.write("Button Works")
 
+class GameHandler(webapp2.RequestHandler):
+    def get(self):
+		gameTemplate = the_jinja_env.get_template('templates/game.html')
+		self.response.write(gameTemplate.render())
 
 # the app configuration section	
 app = webapp2.WSGIApplication([
   #('/', MainPage),
   ('/', MainHandler),
+  ("/game", GameHandler)
   ], debug=True)
