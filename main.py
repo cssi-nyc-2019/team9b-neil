@@ -20,6 +20,8 @@ class MainHandler(webapp2.RequestHandler):
         self.response.write(homeTemplate.render())
     def post(self):
   	    self.response.write("Button Works")
+  def get(self):  # for a get request
+    self.response.write('Greetings')  # the response
 
 class GameHandler(webapp2.RequestHandler):
     def get(self):
