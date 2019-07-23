@@ -17,13 +17,9 @@ class MainHandler(webapp2.RequestHandler):
   def get(self):  # for a get request
     self.response.write('Greetings')  # the response
 
-<<<<<<< HEAD
-# the app configuration section	
-=======
 
-# the app configuration section
->>>>>>> a5cd64e3cfaf2d752972ad592c864c6102324c66
 app = webapp2.WSGIApplication([
   #('/', MainPage),
   ('/', MainHandler),
   ], debug=True)
+print("DRAGONSSS!!!")
