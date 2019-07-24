@@ -1,9 +1,33 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Trivia Run - Game Page</title>
+    <link rel="stylesheet" href="/styles/style2.css">
   </head>
   <body>
-    <h2> Question: </h2>
+    <div id = "top">
+      <p>Trivia Question</p>
+    </div>
+    
+    <div id = "question">
+      <p>
+        questions
+      </p>
+      <p>
+        image
+      </p>
+        <div id = "answers">
+            <form method="post">
+      <input type="radio" name="ans" value="ans1" /> 1
+      <br>
+      <input type="radio" name="ans" value="ans2" /> 2
+      <br>
+      <input type="radio" name="ans" value="ans3" /> 3
+        </form>
+      </div>
+      <div id = "button">
+        <input type="submit" value="Submit Answer">
+      </div>
+    </div>
+    <script src="/jsDir/script.js"></script>
   </body>
 </html>

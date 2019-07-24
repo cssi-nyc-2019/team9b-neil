@@ -1,0 +1,49 @@
+html {
+  background-image: url("https://cdn.glitch.com/66055498-7168-4eca-821f-f043b4afe5fb%2Fforest.jpg?v=1563983790940");
+}
+
+#top{
+  text-align:center;
+  margin-top: 7%;
+  background-color: black;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  font-size:20px;
+  margin-left: 25%;
+  margin-right: 25%;
+  color: white;
+}
+
+#question{
+  text-align:center;
+  margin-top: 2%;
+  background-color: black;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  padding-bottom: 2%;
+  font-size:20px;
+  margin-left: 17%;
+  margin-right: 17%;
+  color: white;
+}
+
+button{
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 7%;
+  background-color: black;
+  border-color: white;
+  border-width: 2px;
+  border-style: solid;
+  font-size:20px;
+  margin-left: 25%;
+  margin-right: 25%;
+  color: white;
+}
+
+button:hover {
+  background-color: #212121;
+  color: white;
+}
