@@ -3,6 +3,7 @@ import webapp2
 import jinja2
 import os
 import random
+
 # this initializes the jinja2 environment
 # this will be the same in every app that uses the jinja2 templating library
 the_jinja_env = jinja2.Environment(
@@ -11,8 +12,63 @@ the_jinja_env = jinja2.Environment(
   autoescape=True)
 
 number = 0
+correct = 0
+num = 0
 
 # other functions should go above the handlers or in a separate file
+
+def scoreDeterminer(self):
+	player_ans = self.request.get('ans')
+	if number == 0:
+		if player_ans == "ans1":
+			correct += 1
+		else:
+			print("incorrect")
+	if number == 1:
+		if player_ans == "ans2":
+			correct += 1
+		else:
+			print("incorrect")
+	if number == 2:
+		if player_ans == "ans3":
+			correct += 1
+		else:
+			print("incorrect")
+	if number == 3:
+		if player_ans == "ans2":
+			correct += 1
+		else:
+			print("incorrect")
+	if number == 4:
+		if player_ans == "ans1":
+			correct += 1
+		else:
+			print("incorrect")
+	if number == 5:
+		if player_ans == "ans2":
+			correct += 1
+		else:
+			print("incorrect")
+	if number == 6:
+		if player_ans == "ans3":
+			correct += 1
+		else:
+			print("incorrect")
+	if number == 7:
+		if player_ans == "ans2":
+			correct += 1
+		else:
+			print("incorrect")
+	if number == 8:
+		if player_ans == "ans1":
+			correct += 1
+		else:
+			print("incorrect")
+	if number == 9:
+		if player_ans == "ans3":
+			correct += 1
+		else:
+			print("incorrect")
 
 # the handler section
 class MainHandler(webapp2.RequestHandler):
@@ -23,6 +79,10 @@ class MainHandler(webapp2.RequestHandler):
 
 	def post(self):
 		global number
+		global correct
+		global num
+
+		# while num < 10 and correct <= 10:
 		gameTemplate = the_jinja_env.get_template('templates/game.html')
 		triviaDict1 = { "question": "What is the largest continent?", "img": "", "ans1": "Asia", "ans2": "North America", "ans3": "Africa" }
 		triviaDict2 = { "question": "What is the tallest mammal?", "img": "", "ans1": "Elephant", "ans2": "Giraffe", "ans3": "Gorilla" }
@@ -35,22 +95,15 @@ class MainHandler(webapp2.RequestHandler):
 		triviaDict9 = { "question": "How do you say goodbye in Japanese?", "img": "", "ans1": "Sayonara", "ans2": "Joigin", "ans3": "Annyeong" }
 		triviaDict10 = { "question": "How many strings does a cello have?", "img": "", "ans1": "5", "ans2": "6", "ans3": "4" }
 		triviaList = [triviaDict1, triviaDict2, triviaDict3, triviaDict4, triviaDict5, triviaDict6, triviaDict7, triviaDict8, triviaDict9, triviaDict10]
-		# question = triviaDict1
-		# x = 0
-		# for x in len(triviaList)-1:
-
-		# self.response.write(gameTemplate.render(randomQ))
-		player_ans = self.request.get('ans')
-		# if number == 0:
-		# 	if player_ans == "ans1":
-		# 		print(number)
-		# 	else:
-		# 		print("incorrect")
 		self.response.write(gameTemplate.render(triviaList[number]))
-		number += 1
+		scoreDeterminer(self)
+		# if number < 10 and num < 10:
+		# 	self.response.write(gameTemplate.render(triviaList[number]))
+		# 	num += 1
+			# number += 1
 		if number == 10:
 			number = 0
-
+		number += 1
 
 class GameHandler(webapp2.RequestHandler):
 	def get(self):

@@ -23,11 +23,81 @@ p{
 a{
   color:white;
 }
+/*input{
+  height:80px;
+  width:150px;
+  font-size:50px;
+  text-shadow:2px 2px red;
+}*/
+ul {
+  list-style-type: none;
+  padding: 0;
+  border: 1px solid #ddd;
+}
+
+ul li {
+  padding: 8px 16px;
+  border-bottom: 1px solid #ddd;
+}
+
+ul li:last-child {
+  border-bottom: none
+}
+
+ul {
+  text-allign: center;
+  text-shadow: 1.50px 1.50px red;
+  box-shadow: 15px 15px 5px black
+}
+
+h1 {
+  text-shadow: 2px 2px red;
+}
+
+p{
+  text-shadow: 2px 2px red;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 450px;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+input{
+  -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
+  transition: width 2s, height 2s, transform 2s;
+}
+input:hover{
+  -webkit-transform: rotate(360deg); 
+  transform: rotate(360deg);
+  height: 160px;
+  width:300px
+}
+
 button{
   height:80px;
   width:150px;
   font-size:50px;
   text-shadow:2px 2px red;
-  
-  
+  border-radius:25px;
 }
