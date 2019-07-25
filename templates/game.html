@@ -4,30 +4,30 @@
     <link rel="stylesheet" href="/styles/style2.css">
   </head>
   <body>
+    <embed src="https://cdn.glitch.com/450ac119-bcdb-4e8d-94c2-db09fdec39d6%2F1%20Hour%20of%20Dark%20Piano%20Music%20III%20Dark%20Piano%20For%20Dark%20Thoughts.mp3?v=1563914563158" loop="true" hidden="true" autostart="true">
     <div id = "top">
       <p>Trivia Question</p>
     </div>
-    
     <div id = "question">
       <p>
-        questions
+        {{question}}
       </p>
       <p>
-        image
+        <img src= {{img}}>
       </p>
         <div id = "answers">
-            <form method="post">
-      <input type="radio" name="ans" value="ans1" /> 1
+            <form method="post" action="/">
+      <input type="radio" name="ans" value="ans1" /> {{ans1}}
       <br>
-      <input type="radio" name="ans" value="ans2" /> 2
+      <input type="radio" name="ans" value="ans2" /> {{ans2}}
       <br>
-      <input type="radio" name="ans" value="ans3" /> 3
-        </form>
+      <input type="radio" name="ans" value="ans3" /> {{ans3}}
       </div>
       <div id = "button">
         <input type="submit" value="Submit Answer">
       </div>
+      </form>
     </div>
-    <script src="/jsDir/script.js"></script>
+    <!-- <script src="/jsDir/script.js"></script> -->
   </body>
 </html>
