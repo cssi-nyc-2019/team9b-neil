@@ -1,48 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Hello!</title>
+    
+<style>
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  font-size: 21px;
+}
+
+a:active {
+  color: gray;
+}
+</style>
+    <title>Trivia Run:EscapeFromReiaz</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    <!-- import the webpage's stylesheet -->
-    <link rel="stylesheet" href="/styles/style3.css">
-  </head> 
-
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="/script.js" defer></script>
+  </head>
   <body>
+<!--     <style>
+      ul {
+        text-allign: center;
+        text-shadow: 1.50px 1.50px red;
+        box-shadow: 15px 15px 5px black; 
+      }
+    </style> -->
+
+      <div id = "link1">
         <ul>
-          <li><a href="./about.html">About</a></li>
           <li><a href="./login.html">Login</a></li>
-          <li><a href="./sign.html">Sign Up</a></li>
-           
+          <li><a href="./sign.html">Sign up</a></li>
+          <li><a href="./logout.html">Log </a></li>
         </ul>
+      </div>
+<!--     <style>
+      h1 {
+  text-shadow: 2px 2px red;
+}
+    </style>
     <h1 class="tooltip">
       Trivia Run: Escape from Reiaz <span class="tooltiptext">Warning:Flashing Lights, Loud Noises and Reiaz Ramdial</span>
     </h1>
-    <p>NJTR Production</p>
+    <style>
+      p{
+        text-shadow: 2px 2px red;
+      }
+    </style> -->
+  <div id = "story">
+    <p><u>Trivia Run</u></p> 
     <p>
-      You wake up in a forest covered in a thick smog. Your throat grows tight as you try to breathe in the heavy air. As you stand up you hear a shuffling in the brambles behind you. A screeching can be heard as the silouhette of a tall goblin faced creature rises from the shadows. Beads of sweat fall from your fivehead, your hands get clammy and your eyes start to dialate. You don't know what it is but you know you have to run.
+      Welcome to Trivia Run. You will be put through a series of trivia questions, your goal is to get them correct and escape the forest. If you answer questions incorrectly, you will be gifted with an unpleasant surprise. Hurry and escape as quickly as you can!.
     </p>
+  </div>
     <div class="display" id="front-page">
       <embed src="https://cdn.glitch.com/bb25481b-e5d0-4722-9568-07a35deaad35%2F1%20Hour%20of%20Dark%20Piano%20Music%20III%20Dark%20Piano%20For%20Dark%20Thoughts.mp3?v=1564063434969" width="300" height="90" loop="true" hidden="true" autostart="true">
     </div>
-        <form method= "post">
+    
+    <h2> 
     <style>
       button{
         -webkit-transition: width 2s, height 2s, -webkit-transform 2s; /* Safari */
   transition: width 2s, height 2s, transform 2s;
 }
       button:hover{
-      -webkit-transform: rotate(360deg); 
-      transform: rotate(360deg);
+      -webkit-transform: rotate(720deg); 
+      transform: rotate(720deg);
       height: 160px;
       width:300px
       }
-    </style>
+    </style> 
+   <style>
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
 
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 450px;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
 
-    <button id="begin-button" type="begin">Run!</button>
-  </form>
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+</style> 
+<form method= "post">
+    <button id="begin-button" type="begin">RUN!</button>
+</form>
+    </h2>   
   </body>
 </html>
